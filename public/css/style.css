@@ -1,0 +1,56 @@
+.wrapper {
+  width: 100%;
+}
+
+.wrapper .field-body {
+  flex-grow: 9;
+}
+
+.wrapper .file-name {
+  /* max-width: 100%; */
+}
+
+.card .card-content i {
+  cursor: pointer;
+}
+
+#comment-box .card-header-icon i {
+  transition: all .3s;
+}
+
+.arrow-up {
+  transform: rotate(180deg);
+}
+
+figure img {
+  height: 100% !important;
+}
+
+figure {
+  border: 1px solid #eee;
+  padding: 5px;
+}
+
+.comment-list {
+  max-width: 100%;
+}
+
+.comment-content {
+  width: 70%;
+}
+
+
+.tar {
+  text-align: right;
+}
+
+
+.w30 {
+  width: 30%;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

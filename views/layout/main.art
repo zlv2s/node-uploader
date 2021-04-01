@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <title>Images Gallery</title>
+  <link rel="stylesheet" href="/public/css/bulma.css">
+  <link rel="stylesheet" href="https://bulma.io/vendor/fontawesome-free-5.15.2-web/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+</head>
+
+<body>
+  <div class="nav-bar">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-6-desktop is-offset-1">
+          <div class="navbar-brand my-4">
+            <a class="navbar-item title" href="/">
+              Uploader
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="columns is-desktop">
+        <div class="column is-6-desktop is-offset-1">
+          {{block 'body'}}
+          {{/block}}
+        </div>
+        <div class="column is-4-desktop">
+          {{block 'stats'}}
+          {{/block}}
+
+          {{block 'popular'}}
+          {{/block}}
+
+          {{block 'comments'}}
+          {{/block}}
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="/public/js/jquery.js"></script>
+  <script src="/public/js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+{{extend './layout/main.art'}}
+
+{{block 'body'}}
+<div class="card">
+  <div class="card-image">
+    <figure class="image is-4by3">
+      <img src="/public/upload/{{image.filename}}" alt="Placeholder image">
+    </figure>
+  </div>
+  <div class="card-content">
+
+    <div class="content">
+      <p>
+        {{image.description}} <a>@fedev</a>.
+        <a href="#">#css</a> <a href="#">#js</a>
+      </p>
+
+      <div class="is-flex is-justify-content-space-between">
+        <time>{{image.ts | getDate}}</time>
+        <div class="mr-4">
+          <span class="mr-3" id="like" data-id="{{image.uniqueId}}">
+            <i class="fas fa-heart mr-1"></i><span class="like-count">{{image.likes}}</span></span>
+          <span>
+            <i class="fas fa-eye mr-1"></i>{{image.views}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card mt-2" id="comment-box">
+  <div class="card-header">
+    <div class="card-header-title">评论</div>
+    <span class="card-header-icon">
+      <span class="icon" id="icon-arrow">
+        <i class="fas fa-angle-up"></i>
+      </span>
+    </span>
+  </div>
+  <div class="card-content" id="comment">
+
+    {{each comments comment}}
+    <article class="media">
+      <figure class="media-left">
+        <p class="image is-64x64">
+          <img src="https://bulma.io/images/placeholders/128x128.png">
+        </p>
+      </figure>
+      <div class="media-content">
+        <div class="content">
+          <p>
+            <strong>{{comment.username}}</strong>
+            <br>
+            {{comment.comment}}
+            <br>
+            <small><a>Like</a> · <a>Reply</a> · 3 hrs</small>
+          </p>
+        </div>
+      </div>
+    </article>
+    {{/each}}
+
+    <article class="media">
+      <figure class="media-left">
+        <p class="image is-64x64">
+          <img src="https://bulma.io/images/placeholders/128x128.png">
+        </p>
+      </figure>
+      <div class="media-content">
+        <div class="field">
+          <p class="control">
+            <textarea class="textarea" id="content" placeholder="请输入内容"></textarea>
+          </p>
+        </div>
+        <div class="field">
+          <p class="control">
+            <input class="input" id="username" placeholder="请输入用户名"></input>
+          </p>
+        </div>
+        <div class="field">
+          <p class="control">
+            <input class="input" id="email" placeholder="请输入邮箱"></input>
+          </p>
+        </div>
+        <div class="field">
+          <p class="control">
+            <button class="button" id="submit-comment">提交评论</button>
+          </p>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+{{/block}}
+
+
+{{block 'stats'}}
+{{include '../views/components/stats.art' sidebar}}
+{{/block}}
+
+{{block 'popular'}}
+{{include '../views/components/popular.art' sidebar}}
+{{/block}}
+
+{{block 'comments'}}
+{{include '../views/components/comments.art' sidebar}}
+{{/block}}

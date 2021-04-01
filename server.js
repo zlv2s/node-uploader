@@ -1,10 +1,9 @@
 const express = require('express')
-const path = require('path')
+require('dotenv').config()
 const app = express()
 const config = require('./server/config')
 
 app.set('port', process.env.PORT || 3030)
-app.set('views', path.join(__dirname, 'views'))
 
 config(app)
 

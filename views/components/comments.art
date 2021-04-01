@@ -1,0 +1,17 @@
+<div class="panel">
+  <h3 class="panel-heading">最新评论</h3>
+  <div class="panel-block">
+    <ul class="comment-list">
+      {{each commentData comment i}}
+      <li class="comment-item mb-1 is-flex is-justify-content-space-between is-align-items-center has-text-grey">
+
+        <p class="comment-content ellipsis">#{{i+1}} {{comment.comment}}</p>
+        <p class="w30 tar">
+          <b class="username mr-1">{{comment.username}}</b>
+          <small class="comment-time">{{comment.ts | getDateDiff}}</small>
+        </p>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

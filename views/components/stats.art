@@ -1,0 +1,21 @@
+<div class="panel">
+  <h3 class="panel-heading">统计</h3>
+  <div class="panel-block is-flex-direction-column is-align-items-flex-start">
+    <div class="img-count my-1">
+      <span>图片总数：</span>
+      <span>{{statsData[0] || 0}}</span>
+    </div>
+    <div class="img-count my-1">
+      <span>评论总数：</span>
+      <span>{{statsData[1] || 0}}</span>
+    </div>
+    <div class="img-count my-1">
+      <span>访问量：</span>
+      <span>{{statsData[2][0] ? statsData[2][0].viewsTotal : 0}}</span>
+    </div>
+    <div class="img-count my-1">
+      <span>点赞：</span>
+      <span>{{statsData[3][0] ? statsData[3][0].likesTotal : 0}}</span>
+    </div>
+  </div>
+</div>

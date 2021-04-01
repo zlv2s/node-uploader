@@ -1,0 +1,14 @@
+<div class="panel popular">
+  <h3 class="panel-heading">热门</h3>
+  <div class="panel-block is-flex-direction-column is-align-items-flex-start">
+    <ul class="is-flex is-flex-wrap-wrap">
+      {{each popularData image}}
+      <figure class="image is-96x96 mr-1 mb-1">
+        <a href="/images/{{image.filename}}">
+          <img src="/public/upload/{{image.filename}}">
+        </a>
+      </figure>
+      {{/each}}
+    </ul>
+  </div>
+</div>
